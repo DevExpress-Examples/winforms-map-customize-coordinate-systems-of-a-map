@@ -1,5 +1,7 @@
-﻿Namespace CoordinateSystems
-    Partial Public Class Form1
+Namespace CoordinateSystems
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,14 +12,14 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+'#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
@@ -32,12 +34,12 @@
             Me.layoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
             Me.lciMap = New DevExpress.XtraLayout.LayoutControlItem()
             Me.lciCoordinateSystem = New DevExpress.XtraLayout.LayoutControlItem()
-            DirectCast(Me.layoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.layoutControl1.SuspendLayout()
-            DirectCast(Me.mapControl, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.lciMap, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.lciCoordinateSystem, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.mapControl), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciMap), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.lciCoordinateSystem), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' imageLayer
@@ -65,11 +67,12 @@
             ' 
             Me.cbDataType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
             Me.cbDataType.FormattingEnabled = True
-            Me.cbDataType.Items.AddRange(New Object() { "Geo Data, Geo Map", "Cartesian Data, Cartesian Map", "Cartesian Data, Geo Map"})
+            Me.cbDataType.Items.AddRange(New Object() {"Geo Data, Geo Map", "Cartesian Data, Cartesian Map", "Cartesian Data, Geo Map"})
             Me.cbDataType.Location = New System.Drawing.Point(114, 12)
             Me.cbDataType.Name = "cbDataType"
             Me.cbDataType.Size = New System.Drawing.Size(658, 21)
             Me.cbDataType.TabIndex = 1
+            AddHandler Me.cbDataType.SelectedIndexChanged, New System.EventHandler(AddressOf Me.cbDataType_SelectedIndexChanged)
             ' 
             ' mapControl
             ' 
@@ -82,9 +85,9 @@
             ' 
             ' layoutControlGroup1
             ' 
-            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True
+            Me.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
             Me.layoutControlGroup1.GroupBordersVisible = False
-            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() { Me.lciMap, Me.lciCoordinateSystem})
+            Me.layoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.lciMap, Me.lciCoordinateSystem})
             Me.layoutControlGroup1.Location = New System.Drawing.Point(0, 0)
             Me.layoutControlGroup1.Name = "layoutControlGroup1"
             Me.layoutControlGroup1.Size = New System.Drawing.Size(784, 561)
@@ -116,27 +119,33 @@
             Me.Controls.Add(Me.layoutControl1)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            DirectCast(Me.layoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            AddHandler Me.Load, New System.EventHandler(AddressOf Me.OnLoad)
+            CType((Me.layoutControl1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.layoutControl1.ResumeLayout(False)
-            DirectCast(Me.mapControl, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.layoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.lciMap, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.lciCoordinateSystem, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.mapControl), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.layoutControlGroup1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciMap), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.lciCoordinateSystem), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
-
         End Sub
 
-        #End Region
-
+'#End Region
         Private layoutControl1 As DevExpress.XtraLayout.LayoutControl
+
         Private layoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
-        Private WithEvents cbDataType As System.Windows.Forms.ComboBox
+
+        Private cbDataType As System.Windows.Forms.ComboBox
+
         Private mapControl As DevExpress.XtraMap.MapControl
+
         Private lciMap As DevExpress.XtraLayout.LayoutControlItem
+
         Private lciCoordinateSystem As DevExpress.XtraLayout.LayoutControlItem
+
         Private imageLayer As DevExpress.XtraMap.ImageLayer
+
         Private openStreetMapDataProvider1 As DevExpress.XtraMap.OpenStreetMapDataProvider
+
         Private vectorLayer As DevExpress.XtraMap.VectorItemsLayer
     End Class
 End Namespace
-
