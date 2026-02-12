@@ -23,7 +23,7 @@ To display geographic data, a map should have a geo coordinate system. To displ
 
 * [Map Coordinate Systems](https://docs.devexpress.com/WindowsForms/17867/controls-and-libraries/map-control/coordinate-systems/map-coordinate-systems)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-map-customize-coordinate-systems-of-a-map&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-map-customize-coordinate-systems-of-a-map&~~~was_helpful=no)
 
